@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<link th:href="@{/css/index.css}" rel="stylesheet">
+		<title>Practice 2</title>
+	</head>
+
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>학번</th>
+					<th>이름</th>
+					<th>나이</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each="student : ${studentList}">
+				 	<td><span th:text="${student.id}"></span></td>
+					<td><span th:text="${student.name}"></span></td>
+					<td><span th:text="${student.age}"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>
