@@ -19,4 +19,9 @@ public class MemberServiceImpl implements MemberService{
 	public List<MemberVo> getAllMember(){
 		return memberDao.getAllMember();
 	}
+	
+	@Override
+	public String hello() {
+		return "hello world";
+	}
 }
