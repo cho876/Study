@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.skcho.thymeleafStudy.constant.ReqMap;
@@ -17,6 +18,13 @@ import com.skcho.thymeleafStudy.vo.StudentVo;
 public class StudyController {
 
 	Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	@GetMapping("/hello")
+	public String hello(Model model) {
+		model.addAttribute("name","skcho");
+		return "hello";
+	}
+	
 	
 	// Prac 01. model로 넘겨 Hello World 찍기
 	@RequestMapping(value="/prac1")
